@@ -1,4 +1,4 @@
-MyBlog
-======
+example
+=======
 
-A Symfony project created on April 13, 2017, 8:17 am.
+A Symfony project created on April 10, 2017, 9:41 am.

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block body %}
+<h1>Contacts</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Sent at</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="5">Need to be processed</th>
+        </tr>
+        {% for contact in contacts if not contact.isProcessed %}
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.subject }}</td>
+                <td>{{ contact.sentAt|date('Y-m-d H:i:s') }}</td>
+                <td><a href="{{ path('contact_show', {'id': contact.id}) }}" class="btn btn-primary">View contact request</a></td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <th colspan="5">Already processed</th>
+        </tr>
+        {% for contact in contacts if contact.isProcessed %}
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.subject }}</td>
+                <td>{{ contact.sentAt|date('Y-m-d H:i:s') }}</td>
+                <td><a href="{{ path('contact_show', {'id': contact.id}) }}" class="btn btn-primary">View contact request</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock body %}

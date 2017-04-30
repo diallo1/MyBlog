@@ -1,0 +1,4 @@
+hello.world: C'est le monde.
+hello.not_world: Ce n'est pas le monde.
+hello.name: Bonjour %name% !
+user.title: "%count% utilisateur|%count% utilisateurs"
