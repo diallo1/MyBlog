@@ -1,6 +1,6 @@
 <ul class="nav nav-pills" style="background:{{ color|default('pink') }};padding:1em;">
     <li role="presentation"{{ app.request.get('_route') == 'homepage' ? ' class="active"' }}>
-        <a href="{{ path('homepage') }}">Home</a>
+        <a href="{{ path('homepage') }}">Accueil</a>
     </li>
     <li role="presentation"{{ app.request.get('_route') == 'contact' ? ' class="active"' }}>
         <a href="{{ path('contact') }}">Contact</a>

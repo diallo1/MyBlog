@@ -9,8 +9,8 @@ security:
         in_memory:
             memory:
                 users:
-                    jeremyFreeAgent:
-                        password: aaaa
+                    tmsdiallo:
+                        password: Estiam2017
                         roles:
                             - ROLE_ADMIN
 
