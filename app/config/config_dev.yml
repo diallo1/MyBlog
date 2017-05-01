@@ -31,5 +31,5 @@ monolog:
         #    level: info
 
 swiftmailer:
-    delivery_addresses: ['jeremy.romey@sensiolabs.com']
+    delivery_addresses: ['tmsdiallo@gmail.com']
     # disable_delivery: true
