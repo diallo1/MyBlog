@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+<h1>
+    Blog details
+</h1>
+<div>
+    <h2>Title</h2>
+    <div>{{ blog.title }}</div>
+
+    <h2>Contenu</h2>
+    <div>{{ blog.contenu }}</div>
+
+     <h2>Published at</h2>
+    <div>{{ blog.publishedAt|date('Y-m-d H:s:i') }}</div>
+</div>
+{% endblock body %}

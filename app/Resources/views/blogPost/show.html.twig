@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+<h1>
+    Blog details
+    {% if blog.isProcessed %}
+        <span class="label label-success">Processed!</span>
+    {% else %}
+        <span class="label label-warning">Need to be processed!</span>
+    {% endif %}
+</h1>
+<div>
+    <h2>Title</h2>
+    <div>{{ blog.title }}</div>
+
+    <h2>Contenu</h2>
+    <div>{{ blog.contenu }}</div>
+
+     <h2>Published at</h2>
+    <div>{{ blog.publishedAt|date('Y-m-d H:s:i') }}</div>
+
+    {% if not blog.isProcessed %}
+        <h2>Actions</h2>
+        <div><a href="{{ path('blog_mark_as_processed', {'id': blog.id}) }}" class="btn btn-success">Mark as Processed!</a></div>
+    {% endif %}
+</div>
+{% endblock body %}
